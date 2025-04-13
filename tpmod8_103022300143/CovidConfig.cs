@@ -10,19 +10,21 @@ public class CovidConfig
 
     public static CovidConfig LoadConfig(string path)
     {
-        string json = File.ReadAllText(path);
+        string json = File.ReadAllText("D:\\konstruksi perangkat lunak\\tpmod8_103022300143\\tpmod8_103022300143\\covid_config.json");
         return JsonSerializer.Deserialize<CovidConfig>(json);
     }
 
     public void UbahSatuan()
     {
-        if (satuan_suhu.ToLower() == "celcius")
+        if (satuan_suhu == "Celcius")
         {
-            satuan_suhu = "fahrenheit";
+            satuan_suhu = "Fahrenheit";
         }
         else
         {
-            satuan_suhu = "celcius";
+            satuan_suhu = "Celcius";
         }
     }
 }
+
+
